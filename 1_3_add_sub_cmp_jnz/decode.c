@@ -264,6 +264,106 @@ int main(int argc, char *argv[]) {
 				printf(", %d", (signed char) immediateByte);
 			}
 		}
+		else if (nextChar == 0x74) {
+			printf("je ");
+			int jumpOffset = fgetc(fileInput);
+			printf("%d", (signed char) jumpOffset);
+		}
+		else if (nextChar == 0x7C) {
+			printf("jl ");
+			int jumpOffset = fgetc(fileInput);
+			printf("%d", (signed char) jumpOffset);
+		}
+		else if (nextChar == 0x7E) {
+			printf("jle ");
+			int jumpOffset = fgetc(fileInput);
+			printf("%d", (signed char) jumpOffset);
+		}
+		else if (nextChar == 0x72) {
+			printf("jb ");
+			int jumpOffset = fgetc(fileInput);
+			printf("%d", (signed char) jumpOffset);
+		}
+		else if (nextChar == 0x76) {
+			printf("jbe ");
+			int jumpOffset = fgetc(fileInput);
+			printf("%d", (signed char) jumpOffset);
+		}
+		else if (nextChar == 0x7A) {
+			printf("jp ");
+			int jumpOffset = fgetc(fileInput);
+			printf("%d", (signed char) jumpOffset);
+		}
+		else if (nextChar == 0x70) {
+			printf("jo ");
+			int jumpOffset = fgetc(fileInput);
+			printf("%d", (signed char) jumpOffset);
+		}
+		else if (nextChar == 0x78) {
+			printf("js ");
+			int jumpOffset = fgetc(fileInput);
+			printf("%d", (signed char) jumpOffset);
+		}
+		else if (nextChar == 0x75) {
+			printf("jne ");
+			int jumpOffset = fgetc(fileInput);
+			printf("%d", (signed char) jumpOffset);
+		}
+		else if (nextChar == 0x7D) {
+			printf("jnl ");
+			int jumpOffset = fgetc(fileInput);
+			printf("%d", (signed char) jumpOffset);
+		}
+		else if (nextChar == 0x7F) {
+			printf("jnle ");
+			int jumpOffset = fgetc(fileInput);
+			printf("%d", (signed char) jumpOffset);
+		}
+		else if (nextChar == 0x73) {
+			printf("jnb ");
+			int jumpOffset = fgetc(fileInput);
+			printf("%d", (signed char) jumpOffset);
+		}
+		else if (nextChar == 0x77) {
+			printf("jnbe ");
+			int jumpOffset = fgetc(fileInput);
+			printf("%d", (signed char) jumpOffset);
+		}
+		else if (nextChar == 0x7B) {
+			printf("jnp ");
+			int jumpOffset = fgetc(fileInput);
+			printf("%d", (signed char) jumpOffset);
+		}
+		else if (nextChar == 0x71) {
+			printf("jno ");
+			int jumpOffset = fgetc(fileInput);
+			printf("%d", (signed char) jumpOffset);
+		}
+		else if (nextChar == 0x79) {
+			printf("jns ");
+			int jumpOffset = fgetc(fileInput);
+			printf("%d", (signed char) jumpOffset);
+		}
+		else if (nextChar == 0xE2) {
+			printf("loop ");
+			int jumpOffset = fgetc(fileInput);
+			printf("%d", (signed char) jumpOffset);
+		}
+		else if (nextChar == 0xE1) {
+			printf("loopz ");
+			int jumpOffset = fgetc(fileInput);
+			printf("%d", (signed char) jumpOffset);
+		}
+		else if (nextChar == 0xE0) {
+			printf("loopnz ");
+			int jumpOffset = fgetc(fileInput);
+			printf("%d", (signed char) jumpOffset);
+		}
+		else if (nextChar == 0xE3) {
+			printf("jcxz ");
+			int jumpOffset = fgetc(fileInput);
+			printf("%d", (signed char) jumpOffset);
+		}
 		printf("\n");
 		nextChar = fgetc(fileInput);
 	}
